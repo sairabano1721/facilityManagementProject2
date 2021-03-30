@@ -1,0 +1,35 @@
+create database sql3395846;
+
+
+use sql3395846;
+
+
+
+
+create table facilities(
+idFacilities  int,
+Name varchar(20),
+Location varchar(20),
+phoneNumber int,
+numOfRooms int,
+OccupiedRooms int,
+primary key(idFacilities)
+);
+
+create table facilities_maintenance(
+maintenanceId  int,
+facilityId int,
+roomNum int,
+requestType varchar(200),
+status boolean,
+primary key(maintenanceId)
+);
+
+create table inspections(
+inspectionId  int,
+facilityId int,
+roomNum int,
+needMaintenance boolean,
+requestType varchar(200),
+primary key(inspectionId)
+);
